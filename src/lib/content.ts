@@ -277,7 +277,7 @@ export const testimonials = {
       project: "epencil",
       image: "/img/epencil-home.webp",
       highlight: "Lessons, payments and live classes in one place",
-      approved: false,
+      approved: true,
       quote:
         "I asked for a platform my students would actually enjoy, and that's what I got. I upload each month's lessons and they watch them right on the site, with no way to download them. Payments, ATM receipts, live class links and courier details are all in one place now, so I spend my time teaching instead of chasing records. The credits keep the kids coming back.",
     },
@@ -288,7 +288,7 @@ export const testimonials = {
       project: "laxshman-auto-parts",
       image: "/img/laxshman-home.webp",
       highlight: "Selling online with stock always up to date",
-      approved: false,
+      approved: true,
       quote:
         "We import parts from Japan and needed to sell them online without losing track of stock. Now customers find the right part on their phone and order straight on WhatsApp, and we update stock in a few clicks. The site looks premium, which matters when people are trusting you with genuine parts for their car.",
     },
