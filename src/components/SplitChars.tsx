@@ -87,7 +87,7 @@ export default function SplitChars({
             <motion.span
               key={i}
               aria-hidden
-              className="inline-block"
+              className="no-blur-touch inline-block"
               variants={glyph}
               custom={{ delay, stagger, blur }}
             >

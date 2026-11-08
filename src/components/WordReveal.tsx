@@ -25,7 +25,7 @@ export default function WordReveal({
       {words.map((word, i) => (
         <span key={i}>
           <motion.span
-            className="inline-block"
+            className="no-blur-touch inline-block"
             initial={{ opacity: 0, filter: "blur(8px)", y: 10 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 0.45, delay: delay + i * stagger, ease: [0.44, 0, 0.56, 1] }}

@@ -119,7 +119,7 @@ export default function Showcase() {
           href="/#work"
           onClick={toWork}
           aria-label={showcase.cta}
-          className="group absolute top-1/2 left-1/2 z-[2] h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/75 backdrop-blur-[2px] transition-colors duration-[400ms] hover:bg-white after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:border after:border-white after:content-['']"
+          className="group absolute top-1/2 left-1/2 z-[2] h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/75 backdrop-blur-[2px] max-[809px]:bg-white/85 max-[809px]:backdrop-blur-none transition-colors duration-[400ms] hover:bg-white after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:border after:border-white after:content-['']"
         >
           <svg
             viewBox="0 0 256 256"

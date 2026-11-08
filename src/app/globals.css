@@ -99,6 +99,15 @@ html.lenis body {
   50% { transform: translateY(-10px) rotate(var(--tilt, 0deg)); }
 }
 
+/* Phones: the per-letter / per-word blur on headline reveals is drawn once
+   per glyph per frame, which a phone GPU can't keep up with (the page
+   stutters while headlines come in). They still fade and rise, just sharp. */
+@media (hover: none) and (pointer: coarse) {
+  .no-blur-touch {
+    filter: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

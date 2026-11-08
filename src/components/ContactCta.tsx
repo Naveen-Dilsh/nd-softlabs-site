@@ -29,12 +29,20 @@ const FADE =
  *
  * Motion: the call-to-action block drops in once from 600px above, fading
  * up from transparent, the first time the footer scrolls into view.
+ * The footer is the viewport's full height (svh, so it doesn't jump as a
+ * phone's address bar shows and hides).
  */
 export default function ContactCta() {
   return (
-    <footer
+    <motion.footer
       id="cta"
-      className="relative flex h-[100vh] flex-col items-center justify-end overflow-hidden bg-black px-6 py-9 min-[810px]:px-10 min-[810px]:py-0 min-[1440px]:px-28"
+      // The footer watches the viewport, not the block: the block starts
+      // 600px up, clipped by the footer, so on phones it never counted as
+      // visible itself and stayed hidden.
+      initial="hidden"
+      whileInView="shown"
+      viewport={{ once: true, amount: 0.1 }}
+      className="relative flex h-[100svh] flex-col items-center justify-end overflow-hidden bg-black px-6 py-9 min-[810px]:px-10 min-[810px]:py-0 min-[1440px]:px-28"
     >
       {/* Glow + rays, faded out from the top-left like the page background */}
       <div
@@ -65,9 +73,7 @@ export default function ContactCta() {
       <div className="relative flex w-full max-w-[1366px] flex-col justify-end gap-9 py-10 min-[810px]:flex-1 min-[810px]:gap-7 min-[810px]:py-14 min-[1440px]:gap-9 min-[1440px]:py-20">
         <motion.div
           className="flex flex-col items-center justify-center gap-9 rounded-2xl px-9 py-[60px] min-[810px]:flex-1"
-          initial={{ opacity: 0, y: -600 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          variants={{ hidden: { opacity: 0, y: -600 }, shown: { opacity: 1, y: 0 } }}
           transition={{ type: "spring", bounce: 0.15, duration: 1.6 }}
         >
           <Eyebrow light italic>
@@ -116,6 +122,6 @@ export default function ContactCta() {
           <path d={c.d} />
         </svg>
       ))}
-    </footer>
+    </motion.footer>
   );
 }

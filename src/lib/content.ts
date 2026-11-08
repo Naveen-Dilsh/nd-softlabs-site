@@ -137,8 +137,8 @@ export const hero = {
   /** Client logos, as round badges. */
   avatars: ["/img/logo-epencil.png", "/img/logo-laxshman.png"],
   // The two inline cards that sit inside the headline and cycle images
-  cardA: ["/img/epencil-home.webp", "/img/laxshman-home.webp"],
-  cardB: ["/img/naveen-portfolio.webp", "/img/epencil-home.webp"],
+  cardA: ["/img/epencil-home-sm.webp", "/img/laxshman-home-sm.webp"],
+  cardB: ["/img/naveen-portfolio-sm.webp", "/img/epencil-home-sm.webp"],
 };
 
 export const showcase = {

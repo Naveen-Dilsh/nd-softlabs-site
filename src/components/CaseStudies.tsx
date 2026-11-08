@@ -301,10 +301,10 @@ function Card({ project, index, reduce }: { project: Project; index: number; red
           />
 
           <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-3">
-            <span className="font-display rounded-full bg-white/75 px-3 py-1 text-xs leading-[18px] text-black backdrop-blur-md">
+            <span className="font-display rounded-full bg-white/75 px-3 py-1 text-xs leading-[18px] text-black backdrop-blur-md max-[809px]:bg-white/90 max-[809px]:backdrop-blur-none">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="font-display rounded-full bg-white/75 px-3 py-1 text-xs leading-[18px] text-black backdrop-blur-md">
+            <span className="font-display rounded-full bg-white/75 px-3 py-1 text-xs leading-[18px] text-black backdrop-blur-md max-[809px]:bg-white/90 max-[809px]:backdrop-blur-none">
               {project.category}
             </span>
           </div>
