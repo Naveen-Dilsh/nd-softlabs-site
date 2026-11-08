@@ -262,7 +262,7 @@ export const process = {
 /**
  * Client reviews. Each one is tied to its project (the card links to the case
  * study). A review with `approved: false` is a draft we wrote from the
- * project's brief: it shows in dev with a "Draft" badge and is left out of
+ * project's brief: it shows in dev only and is left out of
  * production builds until the client has read it and said yes. Edit the
  * quote to the client's own words, then set `approved: true`.
  */

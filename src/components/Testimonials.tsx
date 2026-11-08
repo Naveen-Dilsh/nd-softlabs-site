@@ -16,8 +16,8 @@ import Eyebrow from "./Eyebrow";
  *            orange quote marks the project pages use), then the client and a
  *            round arrow. The whole card links to the case study
  *
- * Drafts (`approved: false`) only render in dev, with a badge, so a review
- * never goes live before the client has signed off on it.
+ * Drafts (`approved: false`) only render in dev, so a review never goes live
+ * before the client has signed off on it.
  */
 
 const expoOut = [0.16, 1, 0.3, 1] as const;
@@ -69,11 +69,6 @@ function Card({ t, index }: { t: Item; index: number }) {
             className="size-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent from-30% to-white" />
-          {!t.approved && (
-            <span className="absolute top-3 right-3 rounded-full bg-amber-300 px-3 py-1 text-[12px] font-medium">
-              Draft · awaiting client approval
-            </span>
-          )}
         </div>
 
         <figure className="m-0 flex flex-1 flex-col gap-5 px-6 pb-6 min-[810px]:px-8 min-[810px]:pb-8">
